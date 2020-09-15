@@ -18,8 +18,6 @@ In order to capture the Solution i.e. Drag & Lift Coefficients at the cylinder s
 - Number of Mesh Points Generated (nPoints) = 94,186
 - Number of Mesh Cells Generated (nCells) = 46,630
 
-The image shows the close-up view of the mesh around the cylinder and wake region.
-
 ## Boundary Conditions
 Velocity Boundary Conditions: 
 - A fixed uniform inlet velocity, Ux = 1m/s Uy = 0m/s Uz = 0m/s is given at the inlet patch.
