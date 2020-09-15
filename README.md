@@ -24,11 +24,15 @@ The image shows the close-up view of the mesh around the cylinder and wake regio
 Velocity Boundary Conditions: 
 - A fixed uniform inlet velocity, Ux = 1m/s Uy = 0m/s Uz = 0m/s is given at the inlet patch.
 - Neumann Boundary Condtion is applied with zeroGradient at the oulet patch.
+
 Pressure Boundary Conditions:
 - Neumann Boundary Condtion is applied with zeroGradient at the inlet patch.
 - A fixed uniform 0 pressure condition is given at the outlet patch.
+
 Top and Bottom patches are given a symmetry condition using symmetryPlane.
+
 Cylinder surface is given no-slip condition.
+
 Front and Back patches are kept empty i.e. devoid of boundary conditions.
 
 ## Running The Simulation
