@@ -53,6 +53,16 @@ To Run the Simulation
     
     After reconstructing we need to kill the processors which were allocated to the 4 sub-divisions of the mesh by the following command:
     >$ rm -rf processor*
-
-To Post-Process:
->$ paraFoam &
+    
+## Post-Processing:
+Post Processing is done using paraview which can be done in two ways:
+- Method 1:
+    >$ paraFoam &
+    
+- Method 2:
+    - Firstly we need to convert the files in the format as identified by Paraview by running the command:
+        >$ foamToVTK
+        
+    - After running the previous command, a directory named VTK is created which has the directories at different intervals of time which further contains a file named internal.vtu which is identified by Paraview.
+    - Paraview is launched and internal.vtu is opened and all the data is further extracted from there.
+- Also the Lift & Drag Coefficients are found in *postProcessing/forces/0* directory.
