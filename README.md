@@ -34,8 +34,10 @@ Front and Back patches are kept empty i.e. devoid of boundary conditions.
 ## Running The Simulation
 To Generate Mesh:
 >$ blockMesh
+
 To Check Mesh Quality:
 >$ checkMesh
+
 To Run the Simulation 
 - in Series:
     >$ icoFoam
