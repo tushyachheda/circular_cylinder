@@ -42,11 +42,15 @@ To Run the Simulation
 - in Parallel: 
     We need to first Decompose the Mesh, edit the file *system/decomposeParDict* by running the following command:
     >$ decomposePar
+    
     As the number of subDivisions mentioned in the casefile is 4 and further it's mentioned how many divisions in respective directions, so the mesh will get     divided into 4 divisions, 2 in x directions and 2 in y directions; the mesh will be allocated to 4 processors of the system.
     >$ mpirun -np 4 icoFoam -parallel > log &
+    
     Before viewing the results we need to Reconstruct the mesh by running:
     >$ reconstructPar
+    
     After reconstructing we need to kill the processors which were allocated to the 4 sub-divisions of the mesh by the following command:
     >$ rm -rf processor*
+
 To Post-Process:
 >$ paraFoam &
