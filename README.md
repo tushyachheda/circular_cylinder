@@ -23,18 +23,18 @@ In order to capture the Solution i.e. Drag & Lift Coefficients at the cylinder s
 
 ## Boundary Conditions
 Velocity Boundary Conditions: 
-- A fixed uniform inlet velocity, Ux = 1m/s Uy = 0m/s Uz = 0m/s is given at the inlet patch.
-- Neumann Boundary Condtion is applied with zeroGradient at the oulet patch.
+- Inlet Patch:          A fixed uniform inlet velocity = 1m/s, (Ux = 1m/s Uy = 0m/s Uz = 0m/s).
+- Outlet Patch:         Neumann Boundary Condtion is applied with zeroGradient.
+- Cylinder:             No-slip Condition.
+- Top and Bottom Patch: SymmetryPlane boundary condition.
+- FrontAndBack Patch:   Empty i.e. devoid of boundary conditions.
 
 Pressure Boundary Conditions:
-- Neumann Boundary Condtion is applied with zeroGradient at the inlet patch.
-- A fixed uniform 0 pressure condition is given at the outlet patch.
-
-Top and Bottom patches are given a symmetry condition using symmetryPlane.
-
-Cylinder surface is given no-slip condition.
-
-Front and Back patches are kept empty i.e. devoid of boundary conditions.
+- Inlet Patch:          Neumann Boundary Condtion is applied with zeroGradient
+- Outlet Patch:         A fixed uniform 0Pa pressure condition.
+- Cylinder:             Neumann Boundary Condtion is applied with zeroGradient
+- Top and Bottom Patch: SymmetryPlane boundary condition.
+- FrontAndBack Patch:   Empty i.e. devoid of boundary conditions.
 
 ## Running The Simulation
 To Generate Mesh:
