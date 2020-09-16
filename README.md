@@ -22,14 +22,14 @@ In order to capture the Solution i.e. Drag & Lift Coefficients at the cylinder s
 ![Tt](https://user-images.githubusercontent.com/69853790/93295975-e6e02780-f80b-11ea-92f1-761ec07c99e3.jpeg)
 
 ## Boundary Conditions
-Velocity Boundary Conditions: 
+**Velocity Boundary Conditions**: 
 - Inlet Patch:          A fixed uniform inlet velocity = 1m/s, (Ux = 1m/s Uy = 0m/s Uz = 0m/s).
 - Outlet Patch:         Neumann Boundary Condtion is applied with zeroGradient.
 - Cylinder:             No-slip Condition.
 - Top and Bottom Patch: SymmetryPlane boundary condition.
 - FrontAndBack Patch:   Empty i.e. devoid of boundary conditions.
 
-Pressure Boundary Conditions:
+**Pressure Boundary Conditions**:
 - Inlet Patch:          Neumann Boundary Condtion is applied with zeroGradient
 - Outlet Patch:         A fixed uniform 0Pa pressure condition.
 - Cylinder:             Neumann Boundary Condtion is applied with zeroGradient
