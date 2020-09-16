@@ -20,7 +20,7 @@ In order to capture the Solution i.e. Drag & Lift Coefficients at the cylinder s
 - Number of Mesh Points Generated (nPoints) = 94,186
 - Number of Mesh Cells Generated (nCells) = 46,630
 
-![Tt](https://user-images.githubusercontent.com/69853790/93295975-e6e02780-f80b-11ea-92f1-761ec07c99e3.jpeg)
+![93166816-e62c9000-f73c-11ea-91e1-d6730c4ffdfb](https://user-images.githubusercontent.com/69853790/93309426-25341180-f821-11ea-8d60-5fe4e47248ee.jpg)
 
 ## Boundary Conditions
 **Velocity Boundary Conditions**: 
