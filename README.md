@@ -26,7 +26,7 @@ In order to capture the Solution i.e. Drag & Lift Coefficients at the cylinder s
 **Velocity Boundary Conditions**: 
 - **Inlet Patch**:          A fixed uniform inlet velocity = 1m/s, (U<sub>x</sub> = 1m/s U<sub>y</sub> = 0m/s U<sub>z</sub> = 0m/s).
 - **Outlet Patch**:         Neumann Boundary Condtion is applied with zeroGradient.
-- **Cylinder**:             No-slip Condition.
+- **Cylinder**:             No-Slip Condition.
 - **Top and Bottom Patch**: SymmetryPlane boundary condition.
 - **FrontAndBack Patch**:   Empty i.e. devoid of boundary conditions.
 
@@ -51,7 +51,7 @@ To Run the Simulation
     We need to first Decompose the Mesh, edit the file *system/decomposeParDict* by running the following command:
     >$ decomposePar
     
-    As the number of subDivisions mentioned in the casefile is 4 and further it's mentioned how many divisions in respective directions, so the mesh will get     divided into 4 divisions, 2 in x directions and 2 in y directions; the mesh will be allocated to 4 processors of the system.
+    As the number of subDivisions mentioned in the casefile is 4 and further it's mentioned how many divisions in respective directions, so the mesh will get     divided into 4 divisions, 2 in x direction, 2 in y direction and 1 in z direction; the mesh will be allocated to 4 processors of the system.
     >$ mpirun -np 4 icoFoam -parallel > log &
     
     Before viewing the results we need to Reconstruct the mesh by running:
@@ -75,4 +75,5 @@ Post Processing is done using Paraview 5.6.0 which can be done in two ways:
 
 ## Results:
 Force Coefficients and Strouhal Number calculated by this Numerical Simulation agrees with the literature.
+
 Strouhal Number was calculated with the help of Lift Coefficient (C<sub>l</sub>) v/s Time Data extracted. Fast Fourier Transform (FFT) was used to calculate the shedding frequency which helped in calculation of the Strouhal Number.
