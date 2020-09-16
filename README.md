@@ -1,12 +1,13 @@
 # Numerical Simulation of a Laminar Flow past a Circular Cylinder at Reynolds Number = 100, using OpenFOAM v7 
-The simulation is a part of our Undergraduate Project titled **'Rough Walls'** conducted in the school of Mechanical Sciences at Indian Institute of Technology Goa.
-- Authors: Tushya Chheda, Jainam Jain, Y. Sudhakar
+The simulation is a part of our Undergraduate Project titled '**Flow Over Rough and Engineered Surfaces**' conducted in the school of Mechanical Sciences at Indian Institute of Technology Goa.
+- Authors: Tushya Chheda, Jainam Jain
+- Mentor: Y. Sudhakar
 - E-mail: {tushya.chheda.18003, jainam.jain.18003, sudhakar}@iitgoa.ac.in
 
 The simulations are performed with OpenFOAM v7 in serial and in parallel modes using a machine running Ubuntu 20.04.
 
 ## Fundamental Information
-- Inlet Velocity, Ux = 1m/s
+- Inlet Velocity, U<sub>x</sub> = 1m/s
 - Diameter of the circular cylinder, D = 1m
 - Reynolds Number, Re = 100
 - Kinematic Viscosity, v = 0.01m<sup>2</sup>/s
@@ -23,7 +24,7 @@ In order to capture the Solution i.e. Drag & Lift Coefficients at the cylinder s
 
 ## Boundary Conditions
 **Velocity Boundary Conditions**: 
-- **Inlet Patch**:          A fixed uniform inlet velocity = 1m/s, (Ux = 1m/s Uy = 0m/s Uz = 0m/s).
+- **Inlet Patch**:          A fixed uniform inlet velocity = 1m/s, (U<sub>x</sub> = 1m/s U<sub>y</sub> = 0m/s U<sub>z</sub> = 0m/s).
 - **Outlet Patch**:         Neumann Boundary Condtion is applied with zeroGradient.
 - **Cylinder**:             No-slip Condition.
 - **Top and Bottom Patch**: SymmetryPlane boundary condition.
@@ -60,7 +61,7 @@ To Run the Simulation
     >$ rm -rf processor*
     
 ## Post-Processing:
-Post Processing is done using paraview which can be done in two ways:
+Post Processing is done using Paraview 5.6.0 which can be done in two ways:
 - Method 1:
     >$ paraFoam &
     
@@ -71,3 +72,7 @@ Post Processing is done using paraview which can be done in two ways:
     - After running the previous command, a directory named VTK is created which has the directories at different intervals of time which further contains a file named internal.vtu which is identified by Paraview.
     - Paraview is launched and internal.vtu is opened and all the data is further extracted from there.
 - Also the Lift & Drag Coefficients are found in *postProcessing/forces/0* directory.
+
+## Results:
+Force Coefficients and Strouhal Number calculated by this Numerical Simulation agrees with the literature.
+Strouhal Number was calculated with the help of Lift Coefficient (C<sub>l</sub>) v/s Time Data extracted. Fast Fourier Transform (FFT) was used to calculate the shedding frequency which helped in calculation of the Strouhal Number.
